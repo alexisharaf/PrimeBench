@@ -8,11 +8,35 @@ int main()
 {
 	time_t seconds1, seconds2;
 	
+	bool isprime;
+
 	std::cout << "Hello World!\n"; 
 
 	seconds1 = time(NULL);
 
-	std::cout << seconds1 << std::endl;
+	//std::cout << seconds1 << std::endl;
+
+	for (int i = 2; i <= 1000000; i++)
+	{
+		isprime = true;
+		for (int j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				isprime = false;
+				break;
+			}
+
+
+		}
+
+		if (isprime)
+		{
+			std::cout << i << std::endl;
+		}
+
+	}
+
 
 	seconds2 = time(NULL);
 
